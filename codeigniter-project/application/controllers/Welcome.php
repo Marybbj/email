@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
-	private $p = "example98";
+	private $p = "your password";
 	/**
 	 * Index Page for this controller.
 	 *
@@ -30,7 +30,7 @@ class Welcome extends CI_Controller {
 			'protocol' => 'smtp',
 			'smtp_host' => 'ssl://smtp.googlemail.com',
 			'smtp_port' => 465,
-			'smtp_user' => 'ourexample1@gmail.com',
+			'smtp_user' => 'yourMail@gmail.com',
 			'smtp_pass' => $this->p,
 			'mailtype'  => 'html', 
 			'charset'   => 'iso-8859-1'
@@ -41,8 +41,8 @@ class Welcome extends CI_Controller {
 
 		$this->load->library('email');
 
-		$this->email->from('ourexample1@gmail.com', 'Your Name');
-		$this->email->to('marjinyan95@gmail.com');
+		$this->email->from('yourMail@gmail.com', 'Your Name');
+		$this->email->to('example@gmail.com');
 
 		$this->email->subject('Email Test');
 		$this->email->message('Testing the email class from codeigniter.');
